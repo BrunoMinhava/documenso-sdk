@@ -1,0 +1,107 @@
+{
+  "existing": {
+    "envelope_field": {
+      "ENVELOPE_FIELD00": {
+        "customText": "saa",
+        "data": [],
+        "envelopeId": "sac",
+        "envelopeItemId": "sad",
+        "fieldId": 174,
+        "fieldMeta": "saf",
+        "height": 176,
+        "id": "ENVELOPE_FIELD00",
+        "inserted": true,
+        "page": 179,
+        "positionX": "sb4",
+        "positionY": "sb5",
+        "recipientId": 182,
+        "secondaryId": "sb7",
+        "success": true,
+        "type": "sb9",
+        "width": 186
+      },
+      "ENVELOPE_FIELD01": {
+        "customText": "s154",
+        "data": [],
+        "envelopeId": "s156",
+        "envelopeItemId": "s157",
+        "fieldId": 344,
+        "fieldMeta": "s159",
+        "height": 346,
+        "id": "ENVELOPE_FIELD01",
+        "inserted": true,
+        "page": 349,
+        "positionX": "s15e",
+        "positionY": "s15f",
+        "recipientId": 352,
+        "secondaryId": "s161",
+        "success": true,
+        "type": "s163",
+        "width": 356
+      },
+      "ENVELOPE_FIELD02": {
+        "customText": "s1fe",
+        "data": [],
+        "envelopeId": "s200",
+        "envelopeItemId": "s201",
+        "fieldId": 514,
+        "fieldMeta": "s203",
+        "height": 516,
+        "id": "ENVELOPE_FIELD02",
+        "inserted": true,
+        "page": 519,
+        "positionX": "s208",
+        "positionY": "s209",
+        "recipientId": 522,
+        "secondaryId": "s20b",
+        "success": true,
+        "type": "s20d",
+        "width": 526
+      }
+    }
+  },
+  "new": {
+    "envelope_field": {
+      "envelope_field_ref01": {
+        "customText": "s2a8",
+        "data": [],
+        "envelopeId": "s2aa",
+        "envelopeItemId": "s2ab",
+        "fieldId": 684,
+        "fieldMeta": "s2ad",
+        "height": 686,
+        "inserted": true,
+        "page": 689,
+        "positionX": "s2b2",
+        "positionY": "s2b3",
+        "recipientId": 692,
+        "secondaryId": "s2b5",
+        "success": true,
+        "type": "s2b7",
+        "width": 696
+      }
+    }
+  },
+  "requests": {
+    "POST /envelope/field/create-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/field/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/field/update-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/field/{fieldId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

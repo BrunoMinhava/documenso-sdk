@@ -1,0 +1,260 @@
+# Entity: envelope_field
+
+main: kit: entity: envelope_field: {
+
+  alias: field: {}
+
+  fields: {
+    customText: {
+      h: "Custom Text"
+      n: "customText"
+      r: true
+      t: "`$STRING`"
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 3
+      }
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    envelopeItemId: {
+      h: "Envelope Item Id"
+      n: "envelopeItemId"
+      r: true
+      t: "`$STRING`"
+    }
+    fieldId: {
+      h: "Field Id"
+      n: "fieldId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    fieldMeta: {
+      h: "Field Meta"
+      n: "fieldMeta"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 0
+      }
+    }
+    height: {
+      h: "Height"
+      n: "height"
+      r: true
+      t: "`$NUMBER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    inserted: {
+      h: "Inserted"
+      n: "inserted"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: true
+      t: "`$NUMBER`"
+    }
+    positionX: {
+      h: "Position X"
+      n: "positionX"
+      r: true
+      t: "`$ANY`"
+    }
+    positionY: {
+      h: "Position Y"
+      n: "positionY"
+      r: true
+      t: "`$ANY`"
+    }
+    recipientId: {
+      h: "Recipient Id"
+      n: "recipientId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    secondaryId: {
+      h: "Secondary Id"
+      n: "secondaryId"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+    width: {
+      h: "Width"
+      n: "width"
+      r: true
+      t: "`$NUMBER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "envelope_field"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /envelope/field/create-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/field/create-many"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "create-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/field/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/field/delete"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/field/update-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/field/update-many"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "update-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /envelope/field/{fieldId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "fieldId"
+                r: true
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/envelope/field/{fieldId}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              fieldId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "field"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,694 @@
+# Entity: template
+
+main: kit: entity: template: {
+
+  alias: field: {}
+
+  fields: {
+    attachments: {
+      h: "Attachments"
+      n: "attachments"
+      r: false
+      t: "`$ARRAY`"
+    }
+    authOptions: {
+      h: "Auth Options"
+      n: "authOptions"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    createdAt: {
+      h: "Created At"
+      n: "createdAt"
+      r: true
+      t: "`$STRING`"
+    }
+    directLink: {
+      h: "Direct Link"
+      n: "directLink"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    directRecipientId: {
+      h: "Direct Recipient Id"
+      n: "directRecipientId"
+      r: false
+      t: "`$NUMBER`"
+    }
+    directTemplateRecipientId: {
+      h: "Direct Template Recipient Id"
+      n: "directTemplateRecipientId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    envelopeItems: {
+      h: "Envelope Items"
+      n: "envelopeItems"
+      r: true
+      t: "`$ARRAY`"
+    }
+    externalId: {
+      h: "External Id"
+      n: "externalId"
+      op: {
+        create: {
+          req: false
+          type: [
+            "`$ONE`"
+            [
+              "`$STRING`"
+              "`$NULL`"
+            ]
+          ]
+        }
+      }
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    fields: {
+      h: "Fields"
+      n: "fields"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 3
+      }
+    }
+    folder: {
+      h: "Folder"
+      n: "folder"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    folderId: {
+      h: "Folder Id"
+      n: "folderId"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    globalAccessAuth: {
+      h: "Global Access Auth"
+      n: "globalAccessAuth"
+      r: false
+      t: "`$ARRAY`"
+    }
+    globalActionAuth: {
+      h: "Global Action Auth"
+      n: "globalActionAuth"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: false
+      t: "`$OBJECT`"
+    }
+    publicDescription: {
+      h: "Public Description"
+      n: "publicDescription"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    publicTitle: {
+      h: "Public Title"
+      n: "publicTitle"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    recipients: {
+      h: "Recipients"
+      n: "recipients"
+      r: true
+      t: "`$ARRAY`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    team: {
+      h: "Team"
+      n: "team"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    teamId: {
+      h: "Team Id"
+      n: "teamId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    template: {
+      h: "Template"
+      n: "template"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 5
+      }
+    }
+    templateDocumentData: {
+      h: "Template Document Data"
+      n: "templateDocumentData"
+      r: true
+      t: "`$OBJECT`"
+    }
+    templateDocumentDataId: {
+      h: "Template Document Data Id"
+      n: "templateDocumentDataId"
+      r: true
+      t: "`$STRING`"
+    }
+    templateId: {
+      h: "Template Id"
+      n: "templateId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    templateMeta: {
+      h: "Template Meta"
+      n: "templateMeta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    token: {
+      h: "Token"
+      n: "token"
+      r: true
+      t: "`$STRING`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    updatedAt: {
+      h: "Updated At"
+      n: "updatedAt"
+      r: true
+      t: "`$STRING`"
+    }
+    uploadUrl: {
+      h: "Upload Url"
+      n: "uploadUrl"
+      r: true
+      t: "`$STRING`"
+    }
+    useLegacyFieldInsertion: {
+      h: "Use Legacy Field Insertion"
+      n: "useLegacyFieldInsertion"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    user: {
+      h: "User"
+      n: "user"
+      r: true
+      t: "`$OBJECT`"
+    }
+    userId: {
+      h: "User Id"
+      n: "userId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    visibility: {
+      h: "Visibility"
+      n: "visibility"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "template"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /template/create"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/create"
+          q: {
+            "$action": "create"
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "create"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/create/beta"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/create/beta"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "create"
+            }
+            {
+              lit: "beta"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.template`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/delete"
+          q: {
+            "$action": "delete"
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/direct/create"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/direct/create"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "direct"
+            }
+            {
+              lit: "create"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/direct/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/direct/delete"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "direct"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/direct/toggle"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/direct/toggle"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "direct"
+            }
+            {
+              lit: "toggle"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/duplicate"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/duplicate"
+          q: {
+            "$action": "duplicate"
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "duplicate"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/get-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/get-many"
+          q: {
+            "$action": "get_many"
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "get-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/update"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/update"
+          q: {
+            "$action": "update"
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "update"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/use"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/use"
+          q: {
+            "$action": "use"
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "use"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /template"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "folder_id"
+                or: "folderId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "per_page"
+                or: "perPage"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "query"
+                or: "query"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/template"
+          q: {
+            exist: [
+              "folder_id"
+              "page"
+              "per_page"
+              "query"
+              "type"
+            ]
+          }
+          s: [
+            {
+              lit: "template"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /template/{templateId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "templateId"
+                r: true
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/template/{templateId}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              templateId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

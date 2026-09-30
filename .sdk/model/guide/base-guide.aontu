@@ -1,0 +1,376 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 13
+  metrics: count: path: 89
+  metrics: count: method: 89
+
+  entity: document: {
+    path: "/document": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/document/attachment": {
+      action: "attachment": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/document/attachment/create": {
+      op: create: method: *POST
+    }
+    path: "/document/attachment/delete": {
+      op: create: method: *POST
+    }
+    path: "/document/attachment/update": {
+      op: create: method: *POST
+    }
+    path: "/document/create": {
+      action: "create": {}
+      op: create: method: *POST
+    }
+    path: "/document/create/beta": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.document`")|top
+    }
+    path: "/document/delete": {
+      action: "delete": {}
+      op: create: method: *POST
+    }
+    path: "/document/distribute": {
+      action: "distribute": {}
+      op: create: method: *POST
+    }
+    path: "/document/duplicate": {
+      action: "duplicate": {}
+      op: create: method: *POST
+    }
+    path: "/document/get-many": {
+      action: "get_many": {}
+      op: create: method: *POST
+    }
+    path: "/document/redistribute": {
+      action: "redistribute": {}
+      op: create: method: *POST
+    }
+    path: "/document/update": {
+      action: "update": {}
+      op: create: method: *POST
+    }
+    path: "/document/{documentId}": {
+      rename: param: "documentId": *"id"
+      op: load: method: *GET
+    }
+    path: "/document/{documentId}/download": {
+      action: "download": {}
+      rename: param: "documentId": *"id"
+      op: load: method: *GET
+    }
+    path: "/document/{documentId}/download-beta": {
+      action: "download_beta": {}
+      rename: param: "documentId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: document_field: {
+    path: "/document/field/create": {
+      op: create: method: *POST
+    }
+    path: "/document/field/create-many": {
+      op: create: method: *POST
+    }
+    path: "/document/field/delete": {
+      op: create: method: *POST
+    }
+    path: "/document/field/update": {
+      op: create: method: *POST
+    }
+    path: "/document/field/update-many": {
+      op: create: method: *POST
+    }
+    path: "/document/field/{fieldId}": {
+      rename: param: "fieldId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: document_recipient: {
+    path: "/document/recipient/create": {
+      op: create: method: *POST
+    }
+    path: "/document/recipient/create-many": {
+      op: create: method: *POST
+    }
+    path: "/document/recipient/delete": {
+      op: create: method: *POST
+    }
+    path: "/document/recipient/update": {
+      op: create: method: *POST
+    }
+    path: "/document/recipient/update-many": {
+      op: create: method: *POST
+    }
+    path: "/document/recipient/{recipientId}": {
+      rename: param: "recipientId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: embedding: {
+    path: "/embedding/create-presign-token": {
+      action: "create_presign_token": {}
+      op: create: method: *POST
+    }
+    path: "/embedding/verify-presign-token": {
+      action: "verify_presign_token": {}
+      op: create: method: *POST
+    }
+  }
+
+  entity: envelope: {
+    path: "/envelope": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/envelope/cancel": {
+      action: "cancel": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/create": {
+      action: "create": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/delete": {
+      action: "delete": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/distribute": {
+      action: "distribute": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/duplicate": {
+      action: "duplicate": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/get-many": {
+      action: "get_many": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/redistribute": {
+      action: "redistribute": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/update": {
+      action: "update": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/use": {
+      action: "use": {}
+      op: create: method: *POST
+    }
+    path: "/envelope/{envelopeId}": {
+      rename: param: "envelopeId": *"id"
+      op: load: method: *GET
+    }
+    path: "/envelope/{envelopeId}/audit-log": {
+      action: "audit_log": {}
+      rename: param: "envelopeId": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/envelope/{envelopeId}/audit-log/download": {
+      action: "audit_log_download": {}
+      rename: param: "envelopeId": *"id"
+      op: load: method: *GET
+    }
+    path: "/envelope/{envelopeId}/certificate/download": {
+      action: "certificate_download": {}
+      rename: param: "envelopeId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: envelope_attachment: {
+    path: "/envelope/attachment": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/envelope/attachment/create": {
+      op: create: method: *POST
+    }
+    path: "/envelope/attachment/delete": {
+      op: create: method: *POST
+    }
+    path: "/envelope/attachment/update": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: envelope_field: {
+    path: "/envelope/field/create-many": {
+      op: create: method: *POST
+    }
+    path: "/envelope/field/delete": {
+      op: create: method: *POST
+    }
+    path: "/envelope/field/update-many": {
+      op: create: method: *POST
+    }
+    path: "/envelope/field/{fieldId}": {
+      rename: param: "fieldId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: envelope_item: {
+    path: "/envelope/item/create-many": {
+      op: create: method: *POST
+    }
+    path: "/envelope/item/delete": {
+      op: create: method: *POST
+    }
+    path: "/envelope/item/update-many": {
+      op: create: method: *POST
+    }
+    path: "/envelope/item/{envelopeItemId}/download": {
+      rename: param: "envelopeItemId": *"item_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: envelope_recipient: {
+    path: "/envelope/recipient/create-many": {
+      op: create: method: *POST
+    }
+    path: "/envelope/recipient/delete": {
+      op: create: method: *POST
+    }
+    path: "/envelope/recipient/update-many": {
+      op: create: method: *POST
+    }
+    path: "/envelope/recipient/{recipientId}": {
+      rename: param: "recipientId": *"id"
+      op: load: method: *GET
+    }
+    path: "/envelope/recipient/{recipientId}/reject": {
+      action: "reject": {}
+      rename: param: "recipientId": *"recipient_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: folder: {
+    path: "/folder": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/folder/create": {
+      action: "create": {}
+      op: create: method: *POST
+    }
+    path: "/folder/delete": {
+      action: "delete": {}
+      op: create: method: *POST
+    }
+    path: "/folder/update": {
+      action: "update": {}
+      op: create: method: *POST
+    }
+  }
+
+  entity: template: {
+    path: "/template": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/template/create": {
+      action: "create": {}
+      op: create: method: *POST
+    }
+    path: "/template/create/beta": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.template`")|top
+    }
+    path: "/template/delete": {
+      action: "delete": {}
+      op: create: method: *POST
+    }
+    path: "/template/direct/create": {
+      op: create: method: *POST
+    }
+    path: "/template/direct/delete": {
+      op: create: method: *POST
+    }
+    path: "/template/direct/toggle": {
+      op: create: method: *POST
+    }
+    path: "/template/duplicate": {
+      action: "duplicate": {}
+      op: create: method: *POST
+    }
+    path: "/template/get-many": {
+      action: "get_many": {}
+      op: create: method: *POST
+    }
+    path: "/template/update": {
+      action: "update": {}
+      op: create: method: *POST
+    }
+    path: "/template/use": {
+      action: "use": {}
+      op: create: method: *POST
+    }
+    path: "/template/{templateId}": {
+      rename: param: "templateId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: template_field: {
+    path: "/template/field/create": {
+      op: create: method: *POST
+    }
+    path: "/template/field/create-many": {
+      op: create: method: *POST
+    }
+    path: "/template/field/delete": {
+      op: create: method: *POST
+    }
+    path: "/template/field/update": {
+      op: create: method: *POST
+    }
+    path: "/template/field/update-many": {
+      op: create: method: *POST
+    }
+    path: "/template/field/{fieldId}": {
+      rename: param: "fieldId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: template_recipient: {
+    path: "/template/recipient/create": {
+      op: create: method: *POST
+    }
+    path: "/template/recipient/create-many": {
+      op: create: method: *POST
+    }
+    path: "/template/recipient/delete": {
+      op: create: method: *POST
+    }
+    path: "/template/recipient/update": {
+      op: create: method: *POST
+    }
+    path: "/template/recipient/update-many": {
+      op: create: method: *POST
+    }
+    path: "/template/recipient/{recipientId}": {
+      rename: param: "recipientId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+}

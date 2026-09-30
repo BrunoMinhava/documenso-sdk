@@ -1,0 +1,40 @@
+# BasicEnvelopeFieldFlow
+
+main: kit: flow: BasicEnvelopeFieldFlow:
+{
+  entity: "envelope_field",
+  kind: "basic",
+  name: "BasicEnvelopeFieldFlow",
+  step: [
+    {
+      i: {
+        ref: "envelope_field_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "envelope_field_ref01",
+        srcdatavar: "envelope_field_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "envelope_field01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-envelope_field_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEnvelopeFieldFlow"
+}

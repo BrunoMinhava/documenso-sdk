@@ -1,0 +1,235 @@
+# Entity: folder
+
+main: kit: entity: folder: {
+
+  alias: field: {}
+
+  fields: {
+    createdAt: {
+      h: "Created At"
+      n: "createdAt"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    parentId: {
+      h: "Parent Id"
+      n: "parentId"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    pinned: {
+      h: "Pinned"
+      n: "pinned"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    teamId: {
+      h: "Team Id"
+      n: "teamId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+    updatedAt: {
+      h: "Updated At"
+      n: "updatedAt"
+      r: true
+      t: "`$STRING`"
+    }
+    userId: {
+      h: "User Id"
+      n: "userId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    visibility: {
+      h: "Visibility"
+      n: "visibility"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "folder"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /folder/create"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/folder/create"
+          q: {
+            "$action": "create"
+          }
+          s: [
+            {
+              lit: "folder"
+            }
+            {
+              lit: "create"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /folder/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/folder/delete"
+          q: {
+            "$action": "delete"
+          }
+          s: [
+            {
+              lit: "folder"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /folder/update"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/folder/update"
+          q: {
+            "$action": "update"
+          }
+          s: [
+            {
+              lit: "folder"
+            }
+            {
+              lit: "update"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /folder"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "parent_id"
+                or: "parentId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "per_page"
+                or: "perPage"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "query"
+                or: "query"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/folder"
+          q: {
+            exist: [
+              "page"
+              "parent_id"
+              "per_page"
+              "query"
+              "type"
+            ]
+          }
+          s: [
+            {
+              lit: "folder"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

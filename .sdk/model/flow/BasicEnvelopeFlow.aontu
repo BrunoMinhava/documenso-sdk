@@ -1,0 +1,56 @@
+# BasicEnvelopeFlow
+
+main: kit: flow: BasicEnvelopeFlow:
+{
+  entity: "envelope",
+  kind: "basic",
+  name: "BasicEnvelopeFlow",
+  step: [
+    {
+      i: {
+        ref: "envelope_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        envelope_id: "envelope01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "envelope_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "envelope_ref01",
+        srcdatavar: "envelope_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "envelope01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-envelope_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEnvelopeFlow"
+}

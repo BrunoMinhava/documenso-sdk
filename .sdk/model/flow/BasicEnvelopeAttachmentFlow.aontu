@@ -1,0 +1,30 @@
+# BasicEnvelopeAttachmentFlow
+
+main: kit: flow: BasicEnvelopeAttachmentFlow:
+{
+  entity: "envelope_attachment",
+  kind: "basic",
+  name: "BasicEnvelopeAttachmentFlow",
+  step: [
+    {
+      i: {
+        ref: "envelope_attachment_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "envelope_attachment_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEnvelopeAttachmentFlow"
+}

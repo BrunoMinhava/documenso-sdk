@@ -1,0 +1,184 @@
+# Entity: envelope_attachment
+
+main: kit: entity: envelope_attachment: {
+
+  alias: field: {}
+
+  fields: {
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$OBJECT`"
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    label: {
+      h: "Label"
+      n: "label"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "envelope_attachment"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /envelope/attachment/create"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/attachment/create"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "attachment"
+            }
+            {
+              lit: "create"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/attachment/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/attachment/delete"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "attachment"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/attachment/update"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/attachment/update"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "attachment"
+            }
+            {
+              lit: "update"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /envelope/attachment"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "envelope_id"
+                or: "envelopeId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "token"
+                or: "token"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/envelope/attachment"
+          q: {
+            exist: [
+              "envelope_id"
+              "token"
+            ]
+          }
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "attachment"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,30 @@
+# BasicFolderFlow
+
+main: kit: flow: BasicFolderFlow:
+{
+  entity: "folder",
+  kind: "basic",
+  name: "BasicFolderFlow",
+  step: [
+    {
+      i: {
+        ref: "folder_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "folder_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicFolderFlow"
+}

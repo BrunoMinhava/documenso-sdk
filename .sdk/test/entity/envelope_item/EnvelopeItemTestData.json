@@ -1,0 +1,62 @@
+{
+  "existing": {
+    "envelope_item": {
+      "ENVELOPE_ITEM00": {
+        "data": [],
+        "envelopeId": "s29",
+        "envelopeItemId": "s2a",
+        "success": false,
+        "item_id": "ITEM01",
+        "id": "ENVELOPE_ITEM00"
+      },
+      "ENVELOPE_ITEM01": {
+        "data": [],
+        "envelopeId": "s51",
+        "envelopeItemId": "s52",
+        "success": false,
+        "item_id": "ITEM01",
+        "id": "ENVELOPE_ITEM01"
+      },
+      "ENVELOPE_ITEM02": {
+        "data": [],
+        "envelopeId": "s79",
+        "envelopeItemId": "s7a",
+        "success": false,
+        "item_id": "ITEM01",
+        "id": "ENVELOPE_ITEM02"
+      }
+    }
+  },
+  "new": {
+    "envelope_item": {
+      "envelope_item_ref01": {
+        "data": [],
+        "envelopeId": "sa1",
+        "envelopeItemId": "sa2",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "POST /envelope/item/create-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/item/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/item/update-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/item/{envelopeItemId}/download": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

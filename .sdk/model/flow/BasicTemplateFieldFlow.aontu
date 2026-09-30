@@ -1,0 +1,40 @@
+# BasicTemplateFieldFlow
+
+main: kit: flow: BasicTemplateFieldFlow:
+{
+  entity: "template_field",
+  kind: "basic",
+  name: "BasicTemplateFieldFlow",
+  step: [
+    {
+      i: {
+        ref: "template_field_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "template_field_ref01",
+        srcdatavar: "template_field_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "template_field01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-template_field_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTemplateFieldFlow"
+}

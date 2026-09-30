@@ -1,0 +1,205 @@
+{
+  "existing": {
+    "envelope": {
+      "ENVELOPE00": {
+        "authOptions": "s122",
+        "completedAt": "s123",
+        "createdAt": "s124",
+        "deletedAt": "s125",
+        "directLink": "s126",
+        "documentMeta": {},
+        "envelopeItems": [],
+        "externalId": "s129",
+        "fields": [],
+        "folderId": "s12b",
+        "formValues": "s12c",
+        "id": "ENVELOPE00",
+        "internalVersion": 302,
+        "publicDescription": "s12f",
+        "publicTitle": "s130",
+        "recipients": [],
+        "secondaryId": "s132",
+        "source": "s133",
+        "status": "s134",
+        "team": {},
+        "teamId": 310,
+        "templateId": "s137",
+        "templateType": "s138",
+        "title": "s139",
+        "type": "s13a",
+        "updatedAt": "s13b",
+        "user": {},
+        "userId": 317,
+        "visibility": "s13e"
+      },
+      "ENVELOPE01": {
+        "authOptions": "s244",
+        "completedAt": "s245",
+        "createdAt": "s246",
+        "deletedAt": "s247",
+        "directLink": "s248",
+        "documentMeta": {},
+        "envelopeItems": [],
+        "externalId": "s24b",
+        "fields": [],
+        "folderId": "s24d",
+        "formValues": "s24e",
+        "id": "ENVELOPE01",
+        "internalVersion": 592,
+        "publicDescription": "s251",
+        "publicTitle": "s252",
+        "recipients": [],
+        "secondaryId": "s254",
+        "source": "s255",
+        "status": "s256",
+        "team": {},
+        "teamId": 600,
+        "templateId": "s259",
+        "templateType": "s25a",
+        "title": "s25b",
+        "type": "s25c",
+        "updatedAt": "s25d",
+        "user": {},
+        "userId": 607,
+        "visibility": "s260"
+      },
+      "ENVELOPE02": {
+        "authOptions": "s366",
+        "completedAt": "s367",
+        "createdAt": "s368",
+        "deletedAt": "s369",
+        "directLink": "s36a",
+        "documentMeta": {},
+        "envelopeItems": [],
+        "externalId": "s36d",
+        "fields": [],
+        "folderId": "s36f",
+        "formValues": "s370",
+        "id": "ENVELOPE02",
+        "internalVersion": 882,
+        "publicDescription": "s373",
+        "publicTitle": "s374",
+        "recipients": [],
+        "secondaryId": "s376",
+        "source": "s377",
+        "status": "s378",
+        "team": {},
+        "teamId": 890,
+        "templateId": "s37b",
+        "templateType": "s37c",
+        "title": "s37d",
+        "type": "s37e",
+        "updatedAt": "s37f",
+        "user": {},
+        "userId": 897,
+        "visibility": "s382"
+      }
+    }
+  },
+  "new": {
+    "envelope": {
+      "envelope_ref01": {
+        "authOptions": "s488",
+        "completedAt": "s489",
+        "createdAt": "s48a",
+        "deletedAt": "s48b",
+        "directLink": "s48c",
+        "documentMeta": {},
+        "envelopeItems": [],
+        "externalId": "s48f",
+        "fields": [],
+        "folderId": "s491",
+        "formValues": "s492",
+        "internalVersion": 1172,
+        "publicDescription": "s495",
+        "publicTitle": "s496",
+        "recipients": [],
+        "secondaryId": "s498",
+        "source": "s499",
+        "status": "s49a",
+        "team": {},
+        "teamId": 1180,
+        "templateId": "s49d",
+        "templateType": "s49e",
+        "title": "s49f",
+        "type": "s4a0",
+        "updatedAt": "s4a1",
+        "user": {},
+        "userId": 1187,
+        "visibility": "s4a4"
+      }
+    }
+  },
+  "requests": {
+    "POST /envelope/cancel": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/distribute": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/duplicate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/get-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/redistribute": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/use": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/{envelopeId}/audit-log": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/{envelopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/{envelopeId}/audit-log/download": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/{envelopeId}/certificate/download": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

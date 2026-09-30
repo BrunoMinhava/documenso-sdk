@@ -1,0 +1,79 @@
+{
+  "existing": {
+    "folder": {
+      "FOLDER00": {
+        "createdAt": "s64",
+        "id": "FOLDER00",
+        "name": "s66",
+        "parentId": "s67",
+        "pinned": true,
+        "teamId": 105,
+        "type": "s6a",
+        "updatedAt": "s6b",
+        "userId": 108,
+        "visibility": "s6d"
+      },
+      "FOLDER01": {
+        "createdAt": "sc8",
+        "id": "FOLDER01",
+        "name": "sca",
+        "parentId": "scb",
+        "pinned": true,
+        "teamId": 205,
+        "type": "sce",
+        "updatedAt": "scf",
+        "userId": 208,
+        "visibility": "sd1"
+      },
+      "FOLDER02": {
+        "createdAt": "s12c",
+        "id": "FOLDER02",
+        "name": "s12e",
+        "parentId": "s12f",
+        "pinned": true,
+        "teamId": 305,
+        "type": "s132",
+        "updatedAt": "s133",
+        "userId": 308,
+        "visibility": "s135"
+      }
+    }
+  },
+  "new": {
+    "folder": {
+      "folder_ref01": {
+        "createdAt": "s190",
+        "name": "s192",
+        "parentId": "s193",
+        "pinned": true,
+        "teamId": 405,
+        "type": "s196",
+        "updatedAt": "s197",
+        "userId": 408,
+        "visibility": "s199"
+      }
+    }
+  },
+  "requests": {
+    "POST /folder/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /folder/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /folder/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /folder": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

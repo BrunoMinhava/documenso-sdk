@@ -1,0 +1,247 @@
+{
+  "existing": {
+    "document": {
+      "DOCUMENT00": {
+        "attachments": [],
+        "authOptions": "s173",
+        "completedAt": "s174",
+        "createdAt": "s175",
+        "data": {},
+        "deletedAt": "s177",
+        "document": {},
+        "documentData": {},
+        "documentDataId": "s17a",
+        "documentId": 379,
+        "documentMeta": {},
+        "envelopeId": "s17d",
+        "envelopeItems": [],
+        "externalId": "s17f",
+        "fields": [],
+        "folder": "s181",
+        "folderId": "s182",
+        "formValues": "s183",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "id": "DOCUMENT00",
+        "internalVersion": 391,
+        "meta": {},
+        "recipients": [],
+        "source": "s18a",
+        "status": "s18b",
+        "success": true,
+        "team": "s18d",
+        "teamId": 398,
+        "templateId": "s18f",
+        "title": "s190",
+        "updatedAt": "s191",
+        "uploadUrl": "s192",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 405,
+        "visibility": "s196"
+      },
+      "DOCUMENT01": {
+        "attachments": [],
+        "authOptions": "s2e5",
+        "completedAt": "s2e6",
+        "createdAt": "s2e7",
+        "data": {},
+        "deletedAt": "s2e9",
+        "document": {},
+        "documentData": {},
+        "documentDataId": "s2ec",
+        "documentId": 749,
+        "documentMeta": {},
+        "envelopeId": "s2ef",
+        "envelopeItems": [],
+        "externalId": "s2f1",
+        "fields": [],
+        "folder": "s2f3",
+        "folderId": "s2f4",
+        "formValues": "s2f5",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "id": "DOCUMENT01",
+        "internalVersion": 761,
+        "meta": {},
+        "recipients": [],
+        "source": "s2fc",
+        "status": "s2fd",
+        "success": true,
+        "team": "s2ff",
+        "teamId": 768,
+        "templateId": "s301",
+        "title": "s302",
+        "updatedAt": "s303",
+        "uploadUrl": "s304",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 775,
+        "visibility": "s308"
+      },
+      "DOCUMENT02": {
+        "attachments": [],
+        "authOptions": "s457",
+        "completedAt": "s458",
+        "createdAt": "s459",
+        "data": {},
+        "deletedAt": "s45b",
+        "document": {},
+        "documentData": {},
+        "documentDataId": "s45e",
+        "documentId": 1119,
+        "documentMeta": {},
+        "envelopeId": "s461",
+        "envelopeItems": [],
+        "externalId": "s463",
+        "fields": [],
+        "folder": "s465",
+        "folderId": "s466",
+        "formValues": "s467",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "id": "DOCUMENT02",
+        "internalVersion": 1131,
+        "meta": {},
+        "recipients": [],
+        "source": "s46e",
+        "status": "s46f",
+        "success": true,
+        "team": "s471",
+        "teamId": 1138,
+        "templateId": "s473",
+        "title": "s474",
+        "updatedAt": "s475",
+        "uploadUrl": "s476",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 1145,
+        "visibility": "s47a"
+      }
+    }
+  },
+  "new": {
+    "document": {
+      "document_ref01": {
+        "attachments": [],
+        "authOptions": "s5c9",
+        "completedAt": "s5ca",
+        "createdAt": "s5cb",
+        "data": {},
+        "deletedAt": "s5cd",
+        "document": {},
+        "documentData": {},
+        "documentDataId": "s5d0",
+        "documentId": 1489,
+        "documentMeta": {},
+        "envelopeId": "s5d3",
+        "envelopeItems": [],
+        "externalId": "s5d5",
+        "fields": [],
+        "folder": "s5d7",
+        "folderId": "s5d8",
+        "formValues": "s5d9",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "internalVersion": 1501,
+        "meta": {},
+        "recipients": [],
+        "source": "s5e0",
+        "status": "s5e1",
+        "success": true,
+        "team": "s5e3",
+        "teamId": 1508,
+        "templateId": "s5e5",
+        "title": "s5e6",
+        "updatedAt": "s5e7",
+        "uploadUrl": "s5e8",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 1515,
+        "visibility": "s5ec"
+      }
+    }
+  },
+  "requests": {
+    "POST /document/attachment/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/attachment/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/attachment/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/create/beta": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/distribute": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/duplicate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/get-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/redistribute": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /document/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /document": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /document/attachment": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /document/{documentId}/download": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /document/{documentId}/download-beta": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /document/{documentId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

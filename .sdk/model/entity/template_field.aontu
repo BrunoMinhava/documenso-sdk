@@ -1,0 +1,349 @@
+# Entity: template_field
+
+main: kit: entity: template_field: {
+
+  alias: field: {}
+
+  fields: {
+    customText: {
+      h: "Custom Text"
+      n: "customText"
+      r: true
+      t: "`$STRING`"
+    }
+    documentId: {
+      h: "Document Id"
+      n: "documentId"
+      r: false
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    envelopeItemId: {
+      h: "Envelope Item Id"
+      n: "envelopeItemId"
+      r: true
+      t: "`$STRING`"
+    }
+    field: {
+      h: "Field"
+      n: "field"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 11
+        count: 1
+        depth: 2
+      }
+    }
+    fieldId: {
+      h: "Field Id"
+      n: "fieldId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    fieldMeta: {
+      h: "Field Meta"
+      n: "fieldMeta"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 0
+      }
+    }
+    fields: {
+      h: "Fields"
+      n: "fields"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 3
+      }
+    }
+    height: {
+      h: "Height"
+      n: "height"
+      r: true
+      t: "`$NUMBER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    inserted: {
+      h: "Inserted"
+      n: "inserted"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: true
+      t: "`$NUMBER`"
+    }
+    positionX: {
+      h: "Position X"
+      n: "positionX"
+      r: true
+      t: "`$ANY`"
+    }
+    positionY: {
+      h: "Position Y"
+      n: "positionY"
+      r: true
+      t: "`$ANY`"
+    }
+    recipientId: {
+      h: "Recipient Id"
+      n: "recipientId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    secondaryId: {
+      h: "Secondary Id"
+      n: "secondaryId"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    templateId: {
+      h: "Template Id"
+      n: "templateId"
+      op: {
+        create: {
+          req: true
+          type: "`$NUMBER`"
+        }
+      }
+      r: false
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+    width: {
+      h: "Width"
+      n: "width"
+      r: true
+      t: "`$NUMBER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "template_field"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /template/field/create"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/field/create"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "create"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/field/create-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/field/create-many"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "create-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/field/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/field/delete"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/field/update"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/field/update"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "update"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/field/update-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/field/update-many"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "field"
+            }
+            {
+              lit: "update-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /template/field/{fieldId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "fieldId"
+                r: true
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/template/field/{fieldId}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              fieldId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "field"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

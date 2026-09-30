@@ -1,0 +1,376 @@
+# Entity: envelope_recipient
+
+main: kit: entity: envelope_recipient: {
+
+  alias: field: {}
+
+  fields: {
+    authOptions: {
+      h: "Auth Options"
+      n: "authOptions"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+    }
+    documentDeletedAt: {
+      h: "Document Deleted At"
+      n: "documentDeletedAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: true
+      t: "`$STRING`"
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    expirationNotifiedAt: {
+      h: "Expiration Notified At"
+      n: "expirationNotifiedAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    expired: {
+      h: "Expired"
+      n: "expired"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    expiresAt: {
+      h: "Expires At"
+      n: "expiresAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    fields: {
+      h: "Fields"
+      n: "fields"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 3
+      }
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    readStatus: {
+      h: "Read Status"
+      n: "readStatus"
+      r: true
+      t: "`$STRING`"
+    }
+    recipientId: {
+      h: "Recipient Id"
+      n: "recipientId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    rejectionReason: {
+      h: "Rejection Reason"
+      n: "rejectionReason"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    role: {
+      h: "Role"
+      n: "role"
+      r: true
+      t: "`$STRING`"
+    }
+    sendStatus: {
+      h: "Send Status"
+      n: "sendStatus"
+      r: true
+      t: "`$STRING`"
+    }
+    signedAt: {
+      h: "Signed At"
+      n: "signedAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    signingOrder: {
+      h: "Signing Order"
+      n: "signingOrder"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    signingStatus: {
+      h: "Signing Status"
+      n: "signingStatus"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    token: {
+      h: "Token"
+      n: "token"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "envelope_recipient"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /envelope/recipient/{recipientId}/reject"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "recipient_id"
+                or: "recipientId"
+                r: true
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/envelope/recipient/{recipientId}/reject"
+          q: {
+            "$action": "reject"
+            exist: [
+              "recipient_id"
+            ]
+          }
+          r: {
+            param: {
+              recipientId: "recipient_id"
+            }
+          }
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              var: "recipient_id"
+            }
+            {
+              lit: "reject"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/recipient/create-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/recipient/create-many"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "create-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/recipient/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/recipient/delete"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/recipient/update-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/recipient/update-many"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "update-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /envelope/recipient/{recipientId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "recipientId"
+                r: true
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/envelope/recipient/{recipientId}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              recipientId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

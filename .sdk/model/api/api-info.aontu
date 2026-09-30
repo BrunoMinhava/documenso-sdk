@@ -1,0 +1,29 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: `Welcome to the Documenso v2 API.
+
+This API provides access to our system, which you can use to integrate applications, automate workflows, or build custom tools.`
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: ""
+        scheme: "apiKey"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          url: "https://app.documenso.com/api/v2"
+        }
+      ]
+      summary: "Welcome to the Documenso v2 API."
+      title: "Documenso v2 API"
+      version: "1.0.0"
+      website: "https://app.documenso.com"
+    }
+  }
+}
+

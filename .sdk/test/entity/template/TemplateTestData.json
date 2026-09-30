@@ -1,0 +1,227 @@
+{
+  "existing": {
+    "template": {
+      "TEMPLATE00": {
+        "attachments": [],
+        "authOptions": "s173",
+        "createdAt": "s174",
+        "directLink": "s175",
+        "directRecipientId": 374,
+        "directTemplateRecipientId": 375,
+        "enabled": true,
+        "envelopeId": "s179",
+        "envelopeItems": [],
+        "externalId": "s17b",
+        "fields": [],
+        "folder": "s17d",
+        "folderId": "s17e",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "id": "TEMPLATE00",
+        "meta": {},
+        "publicDescription": "s183",
+        "publicTitle": "s184",
+        "recipients": [],
+        "success": true,
+        "team": "s187",
+        "teamId": 392,
+        "template": {},
+        "templateDocumentData": {},
+        "templateDocumentDataId": "s18b",
+        "templateId": 396,
+        "templateMeta": {},
+        "title": "s18e",
+        "token": "s18f",
+        "type": "s190",
+        "updatedAt": "s191",
+        "uploadUrl": "s192",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 405,
+        "visibility": "s196"
+      },
+      "TEMPLATE01": {
+        "attachments": [],
+        "authOptions": "s2e5",
+        "createdAt": "s2e6",
+        "directLink": "s2e7",
+        "directRecipientId": 744,
+        "directTemplateRecipientId": 745,
+        "enabled": true,
+        "envelopeId": "s2eb",
+        "envelopeItems": [],
+        "externalId": "s2ed",
+        "fields": [],
+        "folder": "s2ef",
+        "folderId": "s2f0",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "id": "TEMPLATE01",
+        "meta": {},
+        "publicDescription": "s2f5",
+        "publicTitle": "s2f6",
+        "recipients": [],
+        "success": true,
+        "team": "s2f9",
+        "teamId": 762,
+        "template": {},
+        "templateDocumentData": {},
+        "templateDocumentDataId": "s2fd",
+        "templateId": 766,
+        "templateMeta": {},
+        "title": "s300",
+        "token": "s301",
+        "type": "s302",
+        "updatedAt": "s303",
+        "uploadUrl": "s304",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 775,
+        "visibility": "s308"
+      },
+      "TEMPLATE02": {
+        "attachments": [],
+        "authOptions": "s457",
+        "createdAt": "s458",
+        "directLink": "s459",
+        "directRecipientId": 1114,
+        "directTemplateRecipientId": 1115,
+        "enabled": true,
+        "envelopeId": "s45d",
+        "envelopeItems": [],
+        "externalId": "s45f",
+        "fields": [],
+        "folder": "s461",
+        "folderId": "s462",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "id": "TEMPLATE02",
+        "meta": {},
+        "publicDescription": "s467",
+        "publicTitle": "s468",
+        "recipients": [],
+        "success": true,
+        "team": "s46b",
+        "teamId": 1132,
+        "template": {},
+        "templateDocumentData": {},
+        "templateDocumentDataId": "s46f",
+        "templateId": 1136,
+        "templateMeta": {},
+        "title": "s472",
+        "token": "s473",
+        "type": "s474",
+        "updatedAt": "s475",
+        "uploadUrl": "s476",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 1145,
+        "visibility": "s47a"
+      }
+    }
+  },
+  "new": {
+    "template": {
+      "template_ref01": {
+        "attachments": [],
+        "authOptions": "s5c9",
+        "createdAt": "s5ca",
+        "directLink": "s5cb",
+        "directRecipientId": 1484,
+        "directTemplateRecipientId": 1485,
+        "enabled": true,
+        "envelopeId": "s5cf",
+        "envelopeItems": [],
+        "externalId": "s5d1",
+        "fields": [],
+        "folder": "s5d3",
+        "folderId": "s5d4",
+        "globalAccessAuth": [],
+        "globalActionAuth": [],
+        "meta": {},
+        "publicDescription": "s5d9",
+        "publicTitle": "s5da",
+        "recipients": [],
+        "success": true,
+        "team": "s5dd",
+        "teamId": 1502,
+        "template": {},
+        "templateDocumentData": {},
+        "templateDocumentDataId": "s5e1",
+        "templateId": 1506,
+        "templateMeta": {},
+        "title": "s5e4",
+        "token": "s5e5",
+        "type": "s5e6",
+        "updatedAt": "s5e7",
+        "uploadUrl": "s5e8",
+        "useLegacyFieldInsertion": false,
+        "user": {},
+        "userId": 1515,
+        "visibility": "s5ec"
+      }
+    }
+  },
+  "requests": {
+    "POST /template/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/create/beta": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/direct/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/direct/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/direct/toggle": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/duplicate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/get-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/use": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /template": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /template/{templateId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

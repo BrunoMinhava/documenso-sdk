@@ -1,0 +1,40 @@
+# BasicTemplateRecipientFlow
+
+main: kit: flow: BasicTemplateRecipientFlow:
+{
+  entity: "template_recipient",
+  kind: "basic",
+  name: "BasicTemplateRecipientFlow",
+  step: [
+    {
+      i: {
+        ref: "template_recipient_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "template_recipient_ref01",
+        srcdatavar: "template_recipient_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "template_recipient01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-template_recipient_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTemplateRecipientFlow"
+}

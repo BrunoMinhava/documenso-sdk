@@ -1,0 +1,181 @@
+# Entity: envelope_item
+
+main: kit: entity: envelope_item: {
+
+  alias: field: {}
+
+  fields: {
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    envelopeItemId: {
+      h: "Envelope Item Id"
+      n: "envelopeItemId"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "envelope_item"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /envelope/item/create-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/item/create-many"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "item"
+            }
+            {
+              lit: "create-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/item/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/item/delete"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "item"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /envelope/item/update-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/envelope/item/update-many"
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "item"
+            }
+            {
+              lit: "update-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /envelope/item/{envelopeItemId}/download"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "item_id"
+                or: "envelopeItemId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "signed"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/envelope/item/{envelopeItemId}/download"
+          q: {
+            exist: [
+              "item_id"
+              "version"
+            ]
+          }
+          r: {
+            param: {
+              envelopeItemId: "item_id"
+            }
+          }
+          s: [
+            {
+              lit: "envelope"
+            }
+            {
+              lit: "item"
+            }
+            {
+              var: "item_id"
+            }
+            {
+              lit: "download"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

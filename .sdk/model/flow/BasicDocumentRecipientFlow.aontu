@@ -1,0 +1,40 @@
+# BasicDocumentRecipientFlow
+
+main: kit: flow: BasicDocumentRecipientFlow:
+{
+  entity: "document_recipient",
+  kind: "basic",
+  name: "BasicDocumentRecipientFlow",
+  step: [
+    {
+      i: {
+        ref: "document_recipient_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "document_recipient_ref01",
+        srcdatavar: "document_recipient_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "document_recipient01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-document_recipient_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDocumentRecipientFlow"
+}

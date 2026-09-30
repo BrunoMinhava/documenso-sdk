@@ -1,0 +1,69 @@
+# Entity: embedding
+
+main: kit: entity: embedding: {
+
+  alias: field: {}
+
+  name: "embedding"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /embedding/create-presign-token"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/embedding/create-presign-token"
+          q: {
+            "$action": "create_presign_token"
+          }
+          s: [
+            {
+              lit: "embedding"
+            }
+            {
+              lit: "create-presign-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /embedding/verify-presign-token"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/embedding/verify-presign-token"
+          q: {
+            "$action": "verify_presign_token"
+          }
+          s: [
+            {
+              lit: "embedding"
+            }
+            {
+              lit: "verify-presign-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

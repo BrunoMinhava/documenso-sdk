@@ -1,0 +1,131 @@
+{
+  "existing": {
+    "envelope_recipient": {
+      "ENVELOPE_RECIPIENT00": {
+        "authOptions": "sd2",
+        "data": [],
+        "documentDeletedAt": "sd4",
+        "email": "sd5",
+        "envelopeId": "sd6",
+        "expirationNotifiedAt": "sd7",
+        "expired": "sd8",
+        "expiresAt": "sd9",
+        "fields": [],
+        "id": "ENVELOPE_RECIPIENT00",
+        "name": "sdc",
+        "readStatus": "sdd",
+        "recipientId": 222,
+        "rejectionReason": "sdf",
+        "role": "se0",
+        "sendStatus": "se1",
+        "signedAt": "se2",
+        "signingOrder": "se3",
+        "signingStatus": "se4",
+        "success": false,
+        "token": "se6",
+        "recipient_id": "RECIPIENT01"
+      },
+      "ENVELOPE_RECIPIENT01": {
+        "authOptions": "s1a4",
+        "data": [],
+        "documentDeletedAt": "s1a6",
+        "email": "s1a7",
+        "envelopeId": "s1a8",
+        "expirationNotifiedAt": "s1a9",
+        "expired": "s1aa",
+        "expiresAt": "s1ab",
+        "fields": [],
+        "id": "ENVELOPE_RECIPIENT01",
+        "name": "s1ae",
+        "readStatus": "s1af",
+        "recipientId": 432,
+        "rejectionReason": "s1b1",
+        "role": "s1b2",
+        "sendStatus": "s1b3",
+        "signedAt": "s1b4",
+        "signingOrder": "s1b5",
+        "signingStatus": "s1b6",
+        "success": false,
+        "token": "s1b8",
+        "recipient_id": "RECIPIENT01"
+      },
+      "ENVELOPE_RECIPIENT02": {
+        "authOptions": "s276",
+        "data": [],
+        "documentDeletedAt": "s278",
+        "email": "s279",
+        "envelopeId": "s27a",
+        "expirationNotifiedAt": "s27b",
+        "expired": "s27c",
+        "expiresAt": "s27d",
+        "fields": [],
+        "id": "ENVELOPE_RECIPIENT02",
+        "name": "s280",
+        "readStatus": "s281",
+        "recipientId": 642,
+        "rejectionReason": "s283",
+        "role": "s284",
+        "sendStatus": "s285",
+        "signedAt": "s286",
+        "signingOrder": "s287",
+        "signingStatus": "s288",
+        "success": false,
+        "token": "s28a",
+        "recipient_id": "RECIPIENT01"
+      }
+    }
+  },
+  "new": {
+    "envelope_recipient": {
+      "envelope_recipient_ref01": {
+        "authOptions": "s348",
+        "data": [],
+        "documentDeletedAt": "s34a",
+        "email": "s34b",
+        "envelopeId": "s34c",
+        "expirationNotifiedAt": "s34d",
+        "expired": "s34e",
+        "expiresAt": "s34f",
+        "fields": [],
+        "name": "s352",
+        "readStatus": "s353",
+        "recipientId": 852,
+        "rejectionReason": "s355",
+        "role": "s356",
+        "sendStatus": "s357",
+        "signedAt": "s358",
+        "signingOrder": "s359",
+        "signingStatus": "s35a",
+        "success": false,
+        "token": "s35c"
+      }
+    }
+  },
+  "requests": {
+    "POST /envelope/recipient/{recipientId}/reject": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/recipient/create-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/recipient/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/recipient/update-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/recipient/{recipientId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

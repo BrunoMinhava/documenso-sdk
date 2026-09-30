@@ -1,0 +1,81 @@
+import { DocumentEntity } from './entity/DocumentEntity';
+import { DocumentFieldEntity } from './entity/DocumentFieldEntity';
+import { DocumentRecipientEntity } from './entity/DocumentRecipientEntity';
+import { EmbeddingEntity } from './entity/EmbeddingEntity';
+import { EnvelopeEntity } from './entity/EnvelopeEntity';
+import { EnvelopeAttachmentEntity } from './entity/EnvelopeAttachmentEntity';
+import { EnvelopeFieldEntity } from './entity/EnvelopeFieldEntity';
+import { EnvelopeItemEntity } from './entity/EnvelopeItemEntity';
+import { EnvelopeRecipientEntity } from './entity/EnvelopeRecipientEntity';
+import { FolderEntity } from './entity/FolderEntity';
+import { TemplateEntity } from './entity/TemplateEntity';
+import { TemplateFieldEntity } from './entity/TemplateFieldEntity';
+import { TemplateRecipientEntity } from './entity/TemplateRecipientEntity';
+export type * from './Documenso2Types';
+import { inspect } from 'node:util';
+import type { Context, Feature } from './types';
+import { config } from './Config';
+import { Documenso2EntityBase } from './Documenso2EntityBase';
+import { Utility } from './utility/Utility';
+import { BaseFeature } from './feature/base/BaseFeature';
+declare const stdutil: Utility;
+declare class Documenso2SDK {
+    _mode: string;
+    _options: any;
+    _utility: Utility;
+    _features: Feature[];
+    _rootctx: Context;
+    constructor(options?: any);
+    options(): any;
+    utility(): any;
+    prepare(fetchargs?: any): Promise<any>;
+    direct(fetchargs?: any): Promise<Error | {
+        ok: boolean;
+        status: number;
+        headers: any;
+        data: any;
+        err?: undefined;
+    } | {
+        ok: boolean;
+        err: any;
+        status?: undefined;
+        headers?: undefined;
+        data?: undefined;
+    }>;
+    _rawRequest(fetchargs?: any): Promise<Error | {
+        ok: boolean;
+        status: number;
+        headers: any;
+        data: any;
+        err?: undefined;
+    } | {
+        ok: boolean;
+        err: any;
+        status?: undefined;
+        headers?: undefined;
+        data?: undefined;
+    }>;
+    graphql(query: string, variables?: any, ctrl?: any): Promise<any>;
+    Document(entopts?: Record<string, any>): DocumentEntity;
+    DocumentField(entopts?: Record<string, any>): DocumentFieldEntity;
+    DocumentRecipient(entopts?: Record<string, any>): DocumentRecipientEntity;
+    Embedding(entopts?: Record<string, any>): EmbeddingEntity;
+    Envelope(entopts?: Record<string, any>): EnvelopeEntity;
+    EnvelopeAttachment(entopts?: Record<string, any>): EnvelopeAttachmentEntity;
+    EnvelopeField(entopts?: Record<string, any>): EnvelopeFieldEntity;
+    EnvelopeItem(entopts?: Record<string, any>): EnvelopeItemEntity;
+    EnvelopeRecipient(entopts?: Record<string, any>): EnvelopeRecipientEntity;
+    Folder(entopts?: Record<string, any>): FolderEntity;
+    Template(entopts?: Record<string, any>): TemplateEntity;
+    TemplateField(entopts?: Record<string, any>): TemplateFieldEntity;
+    TemplateRecipient(entopts?: Record<string, any>): TemplateRecipientEntity;
+    static test(testoptsarg?: any, sdkoptsarg?: any): Documenso2SDK;
+    tester(testopts?: any, sdkopts?: any): Documenso2SDK;
+    toJSON(): {
+        name: string;
+    };
+    toString(): string;
+    [inspect.custom](): string;
+}
+declare const SDK: typeof Documenso2SDK;
+export { stdutil, config, BaseFeature, Documenso2EntityBase, Documenso2SDK, SDK, };

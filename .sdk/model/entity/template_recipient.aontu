@@ -1,0 +1,411 @@
+# Entity: template_recipient
+
+main: kit: entity: template_recipient: {
+
+  alias: field: {}
+
+  fields: {
+    authOptions: {
+      h: "Auth Options"
+      n: "authOptions"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    documentDeletedAt: {
+      h: "Document Deleted At"
+      n: "documentDeletedAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    documentId: {
+      h: "Document Id"
+      n: "documentId"
+      r: false
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: true
+      t: "`$STRING`"
+    }
+    envelopeId: {
+      h: "Envelope Id"
+      n: "envelopeId"
+      r: true
+      t: "`$STRING`"
+    }
+    expirationNotifiedAt: {
+      h: "Expiration Notified At"
+      n: "expirationNotifiedAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    expired: {
+      h: "Expired"
+      n: "expired"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    expiresAt: {
+      h: "Expires At"
+      n: "expiresAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    fields: {
+      h: "Fields"
+      n: "fields"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 10
+        count: 1
+        depth: 3
+      }
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    readStatus: {
+      h: "Read Status"
+      n: "readStatus"
+      r: true
+      t: "`$STRING`"
+    }
+    recipient: {
+      h: "Recipient"
+      n: "recipient"
+      r: true
+      t: "`$OBJECT`"
+    }
+    recipientId: {
+      h: "Recipient Id"
+      n: "recipientId"
+      r: true
+      t: "`$NUMBER`"
+    }
+    recipients: {
+      h: "Recipients"
+      n: "recipients"
+      r: true
+      t: "`$ARRAY`"
+    }
+    rejectionReason: {
+      h: "Rejection Reason"
+      n: "rejectionReason"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    role: {
+      h: "Role"
+      n: "role"
+      r: true
+      t: "`$STRING`"
+    }
+    sendStatus: {
+      h: "Send Status"
+      n: "sendStatus"
+      r: true
+      t: "`$STRING`"
+    }
+    signedAt: {
+      h: "Signed At"
+      n: "signedAt"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    signingOrder: {
+      h: "Signing Order"
+      n: "signingOrder"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    signingStatus: {
+      h: "Signing Status"
+      n: "signingStatus"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    templateId: {
+      h: "Template Id"
+      n: "templateId"
+      op: {
+        create: {
+          req: true
+          type: "`$NUMBER`"
+        }
+      }
+      r: false
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    token: {
+      h: "Token"
+      n: "token"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "template_recipient"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /template/recipient/create"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/recipient/create"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "create"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/recipient/create-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/recipient/create-many"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "create-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/recipient/delete"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/recipient/delete"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "delete"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/recipient/update"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/recipient/update"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "update"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /template/recipient/update-many"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/template/recipient/update-many"
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              lit: "update-many"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /template/recipient/{recipientId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "recipientId"
+                r: true
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/template/recipient/{recipientId}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              recipientId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "template"
+            }
+            {
+              lit: "recipient"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

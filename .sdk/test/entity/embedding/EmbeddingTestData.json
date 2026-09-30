@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "embedding": {
+      "EMBEDDING00": {
+        "id": "EMBEDDING00"
+      },
+      "EMBEDDING01": {
+        "id": "EMBEDDING01"
+      },
+      "EMBEDDING02": {
+        "id": "EMBEDDING02"
+      }
+    }
+  },
+  "new": {
+    "embedding": {
+      "embedding_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /embedding/create-presign-token": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /embedding/verify-presign-token": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

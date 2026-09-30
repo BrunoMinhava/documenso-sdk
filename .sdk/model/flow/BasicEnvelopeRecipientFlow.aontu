@@ -1,0 +1,40 @@
+# BasicEnvelopeRecipientFlow
+
+main: kit: flow: BasicEnvelopeRecipientFlow:
+{
+  entity: "envelope_recipient",
+  kind: "basic",
+  name: "BasicEnvelopeRecipientFlow",
+  step: [
+    {
+      i: {
+        ref: "envelope_recipient_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "envelope_recipient_ref01",
+        srcdatavar: "envelope_recipient_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "envelope_recipient01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-envelope_recipient_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEnvelopeRecipientFlow"
+}

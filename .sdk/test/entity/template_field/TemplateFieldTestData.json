@@ -1,0 +1,129 @@
+{
+  "existing": {
+    "template_field": {
+      "TEMPLATE_FIELD00": {
+        "customText": "sc8",
+        "documentId": "sc9",
+        "envelopeId": "sca",
+        "envelopeItemId": "scb",
+        "field": "scc",
+        "fieldId": 205,
+        "fieldMeta": "sce",
+        "fields": [],
+        "height": 208,
+        "id": "TEMPLATE_FIELD00",
+        "inserted": true,
+        "page": 211,
+        "positionX": "sd4",
+        "positionY": "sd5",
+        "recipientId": 214,
+        "secondaryId": "sd7",
+        "success": true,
+        "templateId": "sd9",
+        "type": "sda",
+        "width": 219
+      },
+      "TEMPLATE_FIELD01": {
+        "customText": "s190",
+        "documentId": "s191",
+        "envelopeId": "s192",
+        "envelopeItemId": "s193",
+        "field": "s194",
+        "fieldId": 405,
+        "fieldMeta": "s196",
+        "fields": [],
+        "height": 408,
+        "id": "TEMPLATE_FIELD01",
+        "inserted": true,
+        "page": 411,
+        "positionX": "s19c",
+        "positionY": "s19d",
+        "recipientId": 414,
+        "secondaryId": "s19f",
+        "success": true,
+        "templateId": "s1a1",
+        "type": "s1a2",
+        "width": 419
+      },
+      "TEMPLATE_FIELD02": {
+        "customText": "s258",
+        "documentId": "s259",
+        "envelopeId": "s25a",
+        "envelopeItemId": "s25b",
+        "field": "s25c",
+        "fieldId": 605,
+        "fieldMeta": "s25e",
+        "fields": [],
+        "height": 608,
+        "id": "TEMPLATE_FIELD02",
+        "inserted": true,
+        "page": 611,
+        "positionX": "s264",
+        "positionY": "s265",
+        "recipientId": 614,
+        "secondaryId": "s267",
+        "success": true,
+        "templateId": "s269",
+        "type": "s26a",
+        "width": 619
+      }
+    }
+  },
+  "new": {
+    "template_field": {
+      "template_field_ref01": {
+        "customText": "s320",
+        "documentId": "s321",
+        "envelopeId": "s322",
+        "envelopeItemId": "s323",
+        "field": "s324",
+        "fieldId": 805,
+        "fieldMeta": "s326",
+        "fields": [],
+        "height": 808,
+        "inserted": true,
+        "page": 811,
+        "positionX": "s32c",
+        "positionY": "s32d",
+        "recipientId": 814,
+        "secondaryId": "s32f",
+        "success": true,
+        "templateId": "s331",
+        "type": "s332",
+        "width": 819
+      }
+    }
+  },
+  "requests": {
+    "POST /template/field/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/field/create-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/field/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/field/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /template/field/update-many": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /template/field/{fieldId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

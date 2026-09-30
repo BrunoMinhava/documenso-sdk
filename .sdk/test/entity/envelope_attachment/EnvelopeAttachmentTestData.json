@@ -1,0 +1,63 @@
+{
+  "existing": {
+    "envelope_attachment": {
+      "ENVELOPE_ATTACHMENT00": {
+        "data": {},
+        "envelopeId": "s3d",
+        "id": "ENVELOPE_ATTACHMENT00",
+        "label": "s3f",
+        "success": true,
+        "type": "s41"
+      },
+      "ENVELOPE_ATTACHMENT01": {
+        "data": {},
+        "envelopeId": "s79",
+        "id": "ENVELOPE_ATTACHMENT01",
+        "label": "s7b",
+        "success": true,
+        "type": "s7d"
+      },
+      "ENVELOPE_ATTACHMENT02": {
+        "data": {},
+        "envelopeId": "sb5",
+        "id": "ENVELOPE_ATTACHMENT02",
+        "label": "sb7",
+        "success": true,
+        "type": "sb9"
+      }
+    }
+  },
+  "new": {
+    "envelope_attachment": {
+      "envelope_attachment_ref01": {
+        "data": {},
+        "envelopeId": "sf1",
+        "label": "sf3",
+        "success": true,
+        "type": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "POST /envelope/attachment/create": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/attachment/delete": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /envelope/attachment/update": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /envelope/attachment": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
