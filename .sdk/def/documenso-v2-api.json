@@ -2,7 +2,7 @@
   "openapi": "3.1.1",
   "info": {
     "title": "Documenso v2 API",
-    "description": "Welcome to the Documenso v2 API.\n\nThis API provides access to our system, which you can use to integrate applications, automate workflows, or build custom tools.",
+    "description": "Welcome to the Documenso v2 API.\n\nThis API provides access to the Documenso system, which you can use to integrate applications, automate workflows, or build custom tools.",
     "version": "1.0.0"
   },
   "servers": [

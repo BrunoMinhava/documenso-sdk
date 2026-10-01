@@ -9,6 +9,6 @@ if [[ ! -f "$trust" ]]; then
   exit 1
 fi
 exec node "$trust" \
-  --repository 'voxgig-sdk/documenso2-sdk' \
+  --repository 'BrunoMinhava/documenso-sdk' \
   --publish '@voxgig-sdk/documenso2-sdk=publish-ts.yml' \
   "$@"

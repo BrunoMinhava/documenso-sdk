@@ -1,6 +1,6 @@
 # Documenso v2 API
 
-Welcome to the Documenso v2 API. This API provides access to our system, which you can use to integrate applications, automate workflows, or build custom tools.
+Welcome to the Documenso v2 API. This API provides access to the Documenso system, which you can use to integrate applications, automate workflows, or build custom tools.
 
 ## Start here
 

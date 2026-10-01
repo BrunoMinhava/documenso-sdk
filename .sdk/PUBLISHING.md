@@ -67,7 +67,7 @@ above and leaves a package that is already set up alone; for the
 `ts` target it runs:
 
     npm trust github @voxgig-sdk/documenso2-sdk \
-      --repository voxgig-sdk/documenso2-sdk \
+      --repository BrunoMinhava/documenso-sdk \
       --file publish-ts.yml \
       --allow-publish
 

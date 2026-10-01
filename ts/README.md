@@ -12,12 +12,12 @@ predictable and low-friction for both humans and AI agents.
 
 ## Install
 This package is not yet published to npm. Install it from the GitHub
-release tag (`ts/vX.Y.Z`, see [Releases](https://github.com/brunominhava/documenso-sdk/releases)), or from a
+release tag (`ts/vX.Y.Z`, see [Releases](https://github.com/BrunoMinhava/documenso-sdk/releases)), or from a
 clone, which carries the compiled `dist/`:
 
 ```bash
-git clone https://github.com/brunominhava/documenso-sdk
-npm install ./documenso2-sdk/ts
+git clone https://github.com/BrunoMinhava/documenso-sdk
+npm install ./documenso-sdk/ts
 ```
 
 
@@ -1767,4 +1767,3 @@ shows exactly what `direct` would send.
 See [REFERENCE.md](REFERENCE.md) for complete API reference
 documentation including all method signatures, entity field schemas,
 and detailed usage examples.
-

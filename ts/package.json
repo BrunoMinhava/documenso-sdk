@@ -10,13 +10,13 @@
     "api-client",
     "documenso2"
   ],
-  "homepage": "https://github.com/brunominhava/documenso-sdk#readme",
+  "homepage": "https://github.com/BrunoMinhava/documenso-sdk#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brunominhava/documenso-sdk.git"
+    "url": "git+https://github.com/BrunoMinhava/documenso-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/brunominhava/documenso-sdk/issues"
+    "url": "https://github.com/BrunoMinhava/documenso-sdk/issues"
   },
   "main": "dist/Documenso2SDK.js",
   "type": "commonjs",
@@ -39,8 +39,8 @@
     "reset": "npm run clean && npm i && npm run build && npm test"
   },
   "author": {
-    "name": "Voxgig",
-    "url": "https://voxgig.com"
+    "name": "Bruno Minhava",
+    "url": "https://github.com/BrunoMinhava"
   },
   "license": "MIT",
   "dependencies": {},
@@ -50,4 +50,3 @@
     "typescript": "^5.9.3"
   }
 }
-

@@ -23,3 +23,11 @@
 # A published package name that does not follow the derivation:
 #
 #   main: kit: target: ts: publish: registry: package: '@scope/name'
+main: kit: author: {
+  name: 'Bruno Minhava'
+  url: 'https://github.com/BrunoMinhava'
+}
+
+main: kit: repo: {
+  path: 'BrunoMinhava/documenso-sdk'
+}

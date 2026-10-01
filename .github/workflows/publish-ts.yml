@@ -8,7 +8,7 @@
 # SET UP ONCE, by a maintainer with publish rights — see .sdk/PUBLISHING.md:
 #
 #   npm trust github @voxgig-sdk/documenso2-sdk \
-#     --repository voxgig-sdk/documenso2-sdk \
+#     --repository BrunoMinhava/documenso-sdk \
 #     --file publish-ts.yml \
 #     --allow-publish
 #

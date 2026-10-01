@@ -1,22 +1,13 @@
 {
-  "NAME": "DOCUMENSO2",
-  "Name": "Documenso2",
   "def": "documenso-v2-api.json",
   "main": {
-    "api": {
-      "entity": {},
-      "guide": {}
-    },
-    "custom": {
-      "plurals": {}
-    },
     "def": {
       "desc": ""
     },
     "kit": {
       "author": {
-        "name": "",
-        "url": ""
+        "name": "Bruno Minhava",
+        "url": "https://github.com/BrunoMinhava"
       },
       "config": {
         "docs_order": [
@@ -6716,7 +6707,7 @@
         }
       },
       "info": {
-        "description": "Welcome to the Documenso v2 API.\n\nThis API provides access to our system, which you can use to integrate applications, automate workflows, or build custom tools.",
+        "description": "Welcome to the Documenso v2 API.\n\nThis API provides access to the Documenso system, which you can use to integrate applications, automate workflows, or build custom tools.",
         "security": {
           "in": "header",
           "name": "Authorization",
@@ -6789,7 +6780,7 @@
       },
       "repo": {
         "host": "github.com",
-        "path": ""
+        "path": "BrunoMinhava/documenso-sdk"
       },
       "target": {
         "ts": {
@@ -6885,8 +6876,5 @@
     }
   },
   "name": "documenso2",
-  "name-": "documenso2",
-  "name_": "documenso2",
-  "name__orig": "documenso2",
   "origin": "voxgig-sdk"
 }
