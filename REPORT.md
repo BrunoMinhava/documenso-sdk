@@ -109,7 +109,7 @@ Results:
 - Failed: 0
 - Skipped: 1
 
-The generated README and reference examples also executed successfully in test mode. :chatgpt-content-reference{index="0"}
+The generated README and reference examples also executed successfully in test mode.
 
 ## Live API test
 
